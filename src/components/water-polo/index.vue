@@ -1,5 +1,5 @@
 <template>
-  <div class="water-polo" ref="cpu"></div>
+  <div class="water-polo" ref="water-polo"></div>
 </template>
 
 <script>
@@ -44,11 +44,11 @@ export default {
   },
   created() {},
   mounted() {
-    this.myCharts1();
+    this.init();
   },
   methods: {
-    myCharts1() {
-      let myChart = echarts.init(this.$refs.cpu);
+    init() {
+      let myChart = echarts.init(this.$refs["water-polo"]);
       let option = {
         series: [
           {
